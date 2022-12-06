@@ -42,7 +42,7 @@ kubectl apply -f k8s/application/
 kubectl get all
 
 # creating and ZAP tests
-kubectl testkube create test --file tests/zap-api-test.yaml --type "zap/api" --name zap-api-test
+kubectl testkube create test --file src/test/zap/zap-api-test.yaml --type "zap/api" --name zap-api-test
 kubectl testkube run test --watch zap-api-test
 ```
 
