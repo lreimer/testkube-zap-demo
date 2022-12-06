@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: zap-daemon
+  namespace: zap
+  labels:
+    app: zap
+    mode: daemon
+spec:
+  containers:
+    - name: zap-daemon
+      image: owasp/zap2docker-stable:2.12.0
+      args: ['zap.sh', '-daemon', 
+              '-port', '9080', 
+              '-host', '0.0.0.0', 
+              '-config', 'api.addrs.addr.name=.*',
+              '-config', 'api.addrs.addr.regex=true', 
+              '-config', 'api.key=1qay2wsx3edc']
+      ports:
+        - containerPort: 9080
