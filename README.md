@@ -1,6 +1,6 @@
 # Continuous OpenAPI Security Tests on K8s with Testkube and ZAP
 
-Demo repository for the DevSecCon 22 Lightning Talk on Continuous OpenAPI Security Tests on K8s with Testkube and ZAP.
+Demo repository for the DevSecCon22 Lightning Talk on Continuous OpenAPI Security Tests on K8s with Testkube and ZAP.
 
 ## Bootstrapping
 
