@@ -1,0 +1,67 @@
+{
+    "components": {},
+    "info": {
+        "title": "OpenAPI definition",
+        "version": "v0"
+    },
+    "openapi": "3.0.1",
+    "paths": {
+        "/api/echo": {
+            "get": {
+                "operationId": "echo",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "message",
+                        "required": false,
+                        "schema": {
+                            "default": "Hello Testkube.",
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "description": "OK"
+                    }
+                },
+                "tags": [
+                    "hands-on-testkube-controller"
+                ]
+            }
+        },
+        "/api/ping": {
+            "get": {
+                "operationId": "ping",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "description": "OK"
+                    }
+                },
+                "tags": [
+                    "hands-on-testkube-controller"
+                ]
+            }
+        }
+    },
+    "servers": [
+        {
+            "description": "Generated server url",
+            "url": "http://localhost:18080/"
+        }
+    ]
+}
