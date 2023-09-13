@@ -32,4 +32,11 @@ spec:
               '-config', 'api.addrs.addr.regex=true', 
               '-config', 'api.key=1qay2wsx3edc']
       ports:
-        - containerPort: 9080
+        - containerPort: 9080      
+      resources:
+        limits:
+          cpu: "2"
+          memory: "1024Mi"
+        requests:
+          cpu: "0.5"
+          memory: "256Mi"

@@ -33,4 +33,11 @@ spec:
       args: ['zap-webswing.sh']
       ports:
         - containerPort: 8080
-        - containerPort: 8090
+        - containerPort: 8090      
+      resources:
+        limits:
+          cpu: "2"
+          memory: "1024Mi"
+        requests:
+          cpu: "0.5"
+          memory: "256Mi"
